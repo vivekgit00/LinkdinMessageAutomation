@@ -21,5 +21,5 @@ This script automates the process of logging into LinkedIn, navigating to your c
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/vivekdholakiyarepo/linkedin-automation.git
+   git clone https://github.com/vivekdholakiyarepo/LinkdinMessageAutomation.git
    cd linkedin-automation
