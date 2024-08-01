@@ -29,7 +29,7 @@ logger = logging.getLogger()
 
 
 #  ChromeDriver Executable Path
-service = Service(executable_path=r"G:\\kelectron\\NDA\\chrome-win64\\")
+service = Service(executable_path=r"Your Chrome Driver Path")
 chrom_opt = ChormOptions()
 
 def check_internet():
@@ -150,7 +150,6 @@ def main_linkedin(driver):
             driver.switch_to.window(driver.window_handles[-1])
             # driver.implicitly_wait(3)
             time.sleep(3)
-            # driver.execute_script("window.scrollTo(0, Y)")
             driver.execute_script("window.scrollTo(0,300);")
             time.sleep(3)
             try:
@@ -179,7 +178,6 @@ def main_linkedin(driver):
                     'Profile Name': name,
                     'Message': random_msg
                 }
-                # print(context)4
                 # sent_msg.append(context)
                 time.sleep(1)
                 data = [context]
@@ -190,12 +188,9 @@ def main_linkedin(driver):
 
             except Exception as e:
                 time.sleep(1)
-                # check_excel(sent_msg)
+                check_excel(sent_msg)
                 logger.error(f"Error interacting with connection: {e}")
 
-        # check_excel(sent_msg)
-        # df = pd.DataFrame(sent_msg)
-        # df.to_excel("profile_records.xlsx", index=False)
 
     except Exception as e:
         logger.error(f"Error during cookie login: {e}")
@@ -231,11 +226,11 @@ while 1:
     if is_internet:
         try:
 
-            # run_duration = 60 * 60
-            # while (time.time() - start_time) < run_duration:
+            run_duration = 60 * 60
+            while (time.time() - start_time) < run_duration:
                 login_with_cookies(driver)
-                # time.sleep(2)
-            # time.sleep(300)
+                time.sleep(2)
+            time.sleep(300)
         except:
             logger.error("lost internet connection")
             check_internet()
