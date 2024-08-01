@@ -15,6 +15,7 @@ This script automates the process of logging into LinkedIn, navigating to your c
 - Python 3.x
 - Google Chrome browser
 - ChromeDriver
+- download chromedriver https://googlechromelabs.github.io/chrome-for-testing/
 
 ## Installation
 
